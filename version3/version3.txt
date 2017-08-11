@@ -1,12 +1,5 @@
 //it should store a todos array as an object 
 
-var todoList = {
-    todos: ["item2", "item2", "item3"],
-    displayTodos: function() {
-    console.log('My Todos: ', this.todos);
-    }
-}
-
 //it should have a display todos method
 
 //it should have an add todos method
@@ -14,3 +7,24 @@ var todoList = {
 //it should have a change todos method
 
 //it should have delete todos method
+
+var todoList = {
+    todos: ["item2", "item2", "item3"],
+    displayTodos: function() {
+        console.log('My Todos: ', this.todos);
+        },
+    addTodo: function(newTodo) {
+        this.todos.push(newTodo);
+        this.displayTodos();
+        },
+    changeTodo: function(position, newValue) {
+        this.todos[position] = newValue;
+        this.displayTodos();
+        },
+    deleteTodo: function(position) {
+        this.todos.splice(position, 1);
+        this.displayTodos();
+        }
+}
+
+
